@@ -1,9 +1,13 @@
 import time
+from collections import defaultdict
 
 def count_words_book(book):
     file = open(book).read()
-    book_word_freq = {}
     # YOUR SOLUTION HERE
+    words = file.split()
+    book_word_freq = defaultdict(int)
+    for word in words:
+        book_word_freq[word] += 1
     time.sleep(0.1)
     return book_word_freq
 
